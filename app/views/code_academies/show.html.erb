@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @code_academy.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @code_academy.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_code_academy_path(@code_academy) %> |
+<%= link_to 'Back', code_academies_path %>

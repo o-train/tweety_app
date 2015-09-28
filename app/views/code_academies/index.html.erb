@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Code Academies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @code_academies.each do |code_academy| %>
+      <tr>
+        <td><%= code_academy.content %></td>
+        <td><%= code_academy.user_id %></td>
+        <td><%= link_to 'Show', code_academy %></td>
+        <td><%= link_to 'Edit', edit_code_academy_path(code_academy) %></td>
+        <td><%= link_to 'Destroy', code_academy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Code academy', new_code_academy_path %>
